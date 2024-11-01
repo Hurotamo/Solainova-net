@@ -1,0 +1,102 @@
+SolAInovaNet/
+│
+├── README.md
+├── LICENSE
+├── .env
+├── .gitignore
+│
+├── config/
+│   ├── default.json              # Default configurations for PEAQ & multi-blockchain
+│   ├── blockchain.js             # Blockchain configurations
+│   └── ai-config.js              # AI and machine learning configurations
+│
+├── backend/
+│   ├── src/
+│   │   ├── main.rs               # Rust-based backend server for managing requests
+│   │   ├── api/
+│   │   │   ├── routes.rs         # API routes for interacting with blockchain nodes
+│   │   │   └── handlers.rs       # Handlers for API requests
+│   │   ├── services/
+│   │   │   ├── peaq_service.rs   # PEAQ-specific service logic
+│   │   │   ├── multi_chain.rs     # Multi-blockchain interaction services
+│   │   │   └── ai_nodes.rs       # AI nodes data handling services
+│   │   ├── utils/
+│   │   │   ├── helpers.rs        # Utility functions
+│   │   │   ├── logging.rs        # Logging utilities
+│   │   │   └── crypto.rs         # Cryptographic utilities for signing transactions
+│   │   └── db/
+│   │       ├── mod.rs            # Database module
+│   │       ├── connection.rs     # Handles database connection and pooling
+│   │       ├── ai_nodes_db.rs    # Database logic for AI nodes data
+│   │       ├── transactions_db.rs # Transaction data handling
+│   │       ├── users_db.rs       # Database logic for user accounts and profiles
+│   │       ├── wallets_db.rs     # Database logic for wallet connections and data
+│   │       ├── multi_chain_db.rs  # Database logic for multi-blockchain interactions
+│   │       ├── analytics_db.rs   # Database logic for analytics and metrics
+│   │       ├── logs_db.rs        # Database logic for storing logs and events
+│   │       └── helpers.rs        # Utility functions for database operations
+│   │
+│   ├── Cargo.toml                # Rust dependencies and package information
+│   └── Dockerfile                # Dockerfile for containerizing the backend
+│
+├── frontend/
+│   ├── public/
+│   │   ├── index.html            # Main HTML file
+│   │   ├── logo.png              # SolAInovaNet Logo
+│   │   └── favicon.ico           # Favicon
+│   │
+│   ├── src/
+│   │   ├── App.js                # Main React component
+│   │   ├── index.js              # Entry point for React
+│   │   ├── components/
+│   │   │   ├── Header.js         # Header with wallet connections
+│   │   │   ├── WalletConnect.js  # Wallet connection component for multiple wallets
+│   │   │   ├── AIAnalytics.js    # Component for displaying AI node analytics
+│   │   │   ├── TransactionList.js # List of user transactions
+│   │   │   └── Chatbot.js        # AI assistant chatbot interface
+│   │   ├── pages/
+│   │   │   ├── Home.js           # Home page
+│   │   │   ├── Nodes.js          # AI Nodes management page
+│   │   │   └── Transactions.js    # Transactions page
+│   │   ├── styles/
+│   │   │   ├── main.css          # Main CSS styles
+│   │   │   └── animations.css     # Advanced CSS animations
+│   │   ├── utils/
+│   │   │   ├── api.js            # API utility functions
+│   │   │   ├── blockchain.js     # Blockchain interaction logic
+│   │   │   └── helpers.js        # General helper functions
+│   └── package.json              # Dependencies for the frontend
+│
+├── scripts/
+│   ├── deploy.sh                 # Script to deploy contracts to multiple blockchains
+│   ├── start-dev.sh              # Script to start the development environment
+│   └── build.sh                  # Script to build the project
+│
+├── contracts/
+│   ├── peaq_contracts/
+│   │   ├── main_contract.rs      # Main PEAQ smart contract in Rust
+│   │   └── utils.rs              # Contract utility functions
+│   ├── multi_chain/
+│   │   ├── ethereum.sol          # Ethereum smart contract in Solidity
+│   │   ├── solana_program.rs     # Solana smart contract in Rust
+│   │   └── substrate_pallet.rs   # Substrate pallet for Polkadot
+│   └── interfaces/
+│       ├── peaq_interface.rs     # PEAQ blockchain interface
+│       └── multi_chain_adapter.rs # Adapter for multi-chain integration
+│
+├── docs/
+│   ├── architecture.md           # Architectural overview
+│   ├── api-documentation.md      # API documentation
+│   └── peaq_integration.md       # Guide on integrating with PEAQ
+│
+└── tests/
+    ├── integration_tests/
+    │   ├── peaq_tests.rs         # Tests for PEAQ blockchain integration
+    │   ├── multi_chain_tests.rs  # Tests for multi-blockchain interactions
+    │   └── ai_nodes_tests.rs     # Tests for AI node functionalities
+    ├── frontend_tests/
+    │   ├── wallet_connect.test.js # Tests for wallet connection
+    │   └── transaction_list.test.js # Tests for transaction listing
+    └── backend_tests/
+        ├── api_tests.rs          # Tests for API endpoints
+        └── db_tests.rs           # Tests for database operations
